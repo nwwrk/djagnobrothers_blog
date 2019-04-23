@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+<head>
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1 style="text-align: center;">{{ title }}</h1>
+    <div style="width: 70%; margin: 0px auto;">{{ msg }}
+        <hr>
+        {% for b in blg %}
+        <div>
+            <h3>{{ b.title }}</h3>
+            <div>{{ b.text | truncatechars:100 }}</div>
+            <div style="text-align: right;">
+                <a href="{% url 'blogs:detail' blog_id=b.id %}">Read article</a>
+            </div>
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+</body>
+</html>

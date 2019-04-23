@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1 style="text-align: center;">{{ blg.title }}</h1>
+    <div style="width: 70%; margin: 0px auto;">
+        <div>
+            <div style="margin: 60px 20px;">
+                {{ blg.text }}
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="{% url 'blogs:index' %}">Return Top</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
